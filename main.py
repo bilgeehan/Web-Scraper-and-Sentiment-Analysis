@@ -2,7 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import csv
 
-# pageNum = 1
 oldDatas = []  # Datas until 2013(page 1 to 10)
 newDatas = []  # Datas in 2023 (page 580 to 590)
 
