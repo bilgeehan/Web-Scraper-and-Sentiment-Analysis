@@ -24,10 +24,6 @@ def webscrape(start_page, end_page):
     return datas
 
 
-oldDatas = webscrape(1, 10)
-newDatas = webscrape(580, 590)
-
-
 def write_to_csv(filename, old_data, new_data):
     fieldnames = ['Old Data', 'New Data']
 
@@ -39,4 +35,6 @@ def write_to_csv(filename, old_data, new_data):
             writer.writerow({'Old Data': old, 'New Data': new})
 
 
+oldDatas = webscrape(1, 10)
+newDatas = webscrape(580, 590)
 write_to_csv('surian.csv', oldDatas, newDatas)
