@@ -1,7 +1,5 @@
 import csv
 from textblob import TextBlob
-import pandas as pd
-from googletrans import Translator
 from mtranslate import translate
 
 old_data = []  # Datas until 2013(page 1 to 10)
@@ -12,7 +10,6 @@ new_data = []  # Datas in 2023 (page 580 to 590)
 new_data_positive = []
 new_data_negative = []
 new_data_neutral = []
-sentiments = []
 
 
 def read_from_csv(filename):
@@ -47,7 +44,6 @@ for data in new_data:
         english_translation = translate(data, 'en')
         blob = TextBlob(english_translation)
         sentiment = blob.sentiment
-        sentiments.append(sentiment)
         if sentiment.polarity > 0:
             new_data_positive.append(data)
         elif sentiment.polarity < 0:
