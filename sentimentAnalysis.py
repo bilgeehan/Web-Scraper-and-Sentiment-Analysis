@@ -69,5 +69,5 @@ with open(docName, "w", newline="", encoding="utf-8") as docc:
     for veri in csv_datas:
         writerr.writerow(veri)
 
-print("Veriler CSV dosyasına yazıldı.")
+print("Datas written to CSV ")
 
